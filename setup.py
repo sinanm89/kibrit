@@ -47,12 +47,14 @@ setup(
     description=read('DESCRIPTION'),
     long_description=read('README.rst'),
     platforms=('Any'),
-    keywords = "mercurial git static revision django flask".split(),
+    keywords = "git static revision django".split(),
 
-    author_email='horneds@gmail.com',
+    maintainer='sinanm89',
+    maintainer_email='sinanm89@gmail.com',
+    author_email='sinanm89@gmail.com',
     url=' http://github.com/sinanm89/kibrit',
     classifiers=[
-        'Development Status :: Alpha',
+        'Development Status :: 3 - Alpha',
         'Intended Audience :: Developers',
         'Intended Audience :: System Administrators',
         'Natural Language :: English',
@@ -60,12 +62,13 @@ setup(
         'License :: OSI Approved :: MIT License',
         'Operating System :: OS Independent',
         'Programming Language :: Python',
-        "Framework :: Django :: 1.4",
-        "Framework :: Django :: 1.5",
-        'Programming Language :: Python :: 2.6.5',
+        "Framework :: Django",
+        'Programming Language :: Python :: 2.6',
         'Environment :: Console',
     ],
     include_package_data=True,
     packages=find_packages(),
     zip_safe=False
 )
+
+# list of all the classifiers https://pypi.python.org/pypi?%3Aaction=list_classifiers

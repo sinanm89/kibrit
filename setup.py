@@ -53,6 +53,7 @@ setup(
     maintainer_email='sinanm89@gmail.com',
     author_email='sinanm89@gmail.com',
     url=' http://github.com/sinanm89/kibrit',
+    download_url = 'https://github.com/sinanm89/kibrit/tarball/0.1',
     classifiers=[
         'Development Status :: 3 - Alpha',
         'Intended Audience :: Developers',

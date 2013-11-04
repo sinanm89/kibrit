@@ -41,7 +41,6 @@ README = op.join(CURDIR, 'README.rst')
 
 setup(
     name=NAME,
-    packages=[NAME],
     version=MODULE.__version__,
     license=MODULE.__license__,
     author=MODULE.__author__,

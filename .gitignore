@@ -1,6 +1,7 @@
 *.pyc
 *~
 .idea
+.pypirc
 settings_local.py
 .vagrant
 .DS_Store

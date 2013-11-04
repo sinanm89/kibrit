@@ -1,19 +1,3 @@
-# setup(
-#     name='django-geoportail',
-#     version='0.3.1',
-#     author=u'Bruno Renié',
-#     author_email='bruno.renie.fr',
-#     packages=['geoportal'],
-#     url='http://bitbucket.org/bruno/django-geoportail',
-#     license='BSD licence, see LICENCE.txt',
-#     description='Add maps and photos from the French National Geographic' + \
-#                 ' Institute to GeoDjango',
-#     long_description=open('README.txt').read(),
-#     zip_safe=False,
-# )
-#
-# #!/usr/bin/env python
-#
 """
 Kibrit
 ------

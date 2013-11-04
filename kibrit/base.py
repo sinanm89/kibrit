@@ -1,10 +1,9 @@
 import os
 from subprocess import Popen, PIPE
-from django.core.cache import cache
-from django.core.mail import mail_admins, send_mail
 import sys
-from barista import settings
-from os import getcwd, name
+from os import name
+
+from django.core.cache import cache
 
 
 class GitRevision(object):
@@ -25,9 +24,9 @@ class GitRevision(object):
         If the kibrit tag is memcached then dont even try to get it
         Otherwise set the path through an explicit path or find on your own
         """
-        cached_kibrit = cache.get(self._tag)
-        if cached_kibrit:
-            self._tag = cached_kibrit
+        cached_tag = cache.get(self._tag)
+        if cached_tag:
+            self._tag = cached_tag
         else:
             self.path = path or self.find_git()
 
@@ -51,7 +50,7 @@ class GitRevision(object):
 
         except Exception, err:
             pass
-        stdout, stderr = [s.strip() for s in proc.communicate()]
+        stdout, stderr = [s.strip() for s in proc.communicate()] or '',''
         return stdout
 
     def find_git(self, **kwargs):
@@ -66,5 +65,5 @@ class GitRevision(object):
                          close_fds=(name == 'posix'), cwd=os.path.dirname(command[2]), **kwargs)
         except Exception, err:
             pass
-        output, error = [s.strip() for s in proc.communicate()]
+        output, error = [s.strip() for s in proc.communicate()] or '',''
         return output

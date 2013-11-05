@@ -1,5 +1,5 @@
-from barista import settings
-from barista.kibrit.base import GitRevision
+from settings import KIBRIT_PATH
+from kibrit.base import GitRevision
 
 
 def revision(request):
@@ -7,7 +7,7 @@ def revision(request):
     A context processor to add the "current site" to the current Context
     '''
     try:
-        revision = GitRevision(settings.KIBRIT_PATH).revision,
+        revision = GitRevision(KIBRIT_PATH).revision,
     except:
         revision = ''# an empty string
     return {

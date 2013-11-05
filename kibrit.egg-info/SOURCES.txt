@@ -1,0 +1,15 @@
+AUTHORS
+CHANGES
+LICENCE
+MANIFEST.in
+README
+setup.cfg
+setup.py
+kibrit/__init__.py
+kibrit/base.py
+kibrit/context_processor.py
+kibrit.egg-info/PKG-INFO
+kibrit.egg-info/SOURCES.txt
+kibrit.egg-info/dependency_links.txt
+kibrit.egg-info/not-zip-safe
+kibrit.egg-info/top_level.txt

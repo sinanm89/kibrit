@@ -1,1 +1,1 @@
-django-kibrit
+django_kibrit

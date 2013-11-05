@@ -50,8 +50,11 @@ class GitRevision(object):
 
         except Exception, err:
             pass
-        stdout, stderr = [s.strip() for s in proc.communicate()] or '',''
-        return stdout
+        try:
+            output, error= [s.strip() for s in proc.communicate()]
+        except Exception, err:
+            output, error = '', ''
+        return output
 
     def find_git(self, **kwargs):
         """
@@ -65,5 +68,8 @@ class GitRevision(object):
                          close_fds=(name == 'posix'), cwd=os.path.dirname(command[2]), **kwargs)
         except Exception, err:
             pass
-        output, error = [s.strip() for s in proc.communicate()] or '',''
+        try:
+            output, error= [s.strip() for s in proc.communicate()]
+        except Exception, err:
+            output, error = '', ''
         return output

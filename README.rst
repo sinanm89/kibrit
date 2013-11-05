@@ -1,20 +1,55 @@
 kibrit
-======
+=============
 
-A git version parser
+A git version parser for django templates.
+
+Usage:
+------
+
+The intent of django_kibrit is to burn the css cache of the client upon a change in the project.
+
+```
+    # Somewhere in your templates
+
+    <link href="{{ STATIC_URL }}css/screen.css{{ REVISION }}" media="screen, projection" rel="stylesheet" type="text/css" />
+
+```
 
 
 Installation:
 ------------
 
-To install kibrit place it on your requirements pip. It requires no special dependencies.
+```
 
-you also need to have 
+    pip install django_kibrit
 
-    'django.core.context_processors.request',
+```
+Kibrit makes use of the `memcached` library in django. To enable this place
 
-in your TEMPLATE_CONTEXT_PROCESSORS and kibrit in your INSTALLED_APPS
+```
 
-The package can try to detect .git in your project automatically but it is best if you explicitly set
+    CACHES = {
+        'default': {
+            'BACKEND': 'django.core.cache.backends.memcached.MemcachedCache',
+            'LOCATION': '127.0.0.1:11211',
+        },
+    }
 
-KIBRIT_PATH in your settings to where the .git file is in your project.
+```
+
+To use kibrit on your templates append the following 2 lines at the end of your projects `settings.py`.
+
+```
+
+    TEMPLATE_CONTEXT_PROCESSORS += 'barista.kibrit.context_processor.revision',
+    INSTALLED_APPS += 'django_kibrit',
+
+```
+
+The package can try to detect .git in your project automatically but it is best if you explicitly set KIBRIT_PATH in your settings to where the .git file is in your project.
+
+```
+
+KIBRIT_PATH = '/path/to/your/.git/file' # You've found it when 'ls -al | grep .git' prints the .git file
+
+```

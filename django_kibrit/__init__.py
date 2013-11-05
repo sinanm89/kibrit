@@ -9,7 +9,7 @@ Use it for control a static's versions.
 
 """
 
-__version__ = '0.0.5'
+__version__ = '0.1.0'
 __project__ = __name__
 __author__ = "Sinan Midillili <sinan@hipo.biz>"
 __license__ = "BSD"

@@ -55,7 +55,7 @@ setup(
     url=' http://github.com/sinanm89/kibrit',
     download_url = 'https://github.com/sinanm89/kibrit/tarball/0.1',
     classifiers=[
-        'Development Status :: 3 - Alpha',
+        'Development Status :: 4 - Beta',
         'Intended Audience :: Developers',
         'Intended Audience :: System Administrators',
         'Natural Language :: English',

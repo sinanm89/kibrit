@@ -16,9 +16,9 @@ __license__ = "BSD"
 
 
 def get_backend(name, **kwargs):
-    """ Create backend by name.
+    """
 
-    :return Backend:
+    Create and return backend
 
     """
 

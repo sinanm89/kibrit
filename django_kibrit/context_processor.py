@@ -1,5 +1,5 @@
 from django.conf import settings
-from kibrit.base import GitRevision
+from django_kibrit.base import GitRevision
 
 
 def revision(request):

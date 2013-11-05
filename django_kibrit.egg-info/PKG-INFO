@@ -1,0 +1,44 @@
+Metadata-Version: 1.1
+Name: django-kibrit
+Version: 0.0.2
+Summary: Kibrit -- an open source git version parser for django
+
+Home-page:  http://github.com/sinanm89/kibrit
+Author: sinanm89
+Author-email: sinanm89@gmail.com
+License: BSD
+Download-URL: https://github.com/sinanm89/kibrit/tarball/0.1
+Description: kibrit
+        ======
+        
+        A git version parser
+        
+        
+        Installation:
+        ------------
+        
+        To install kibrit place it on your requirements pip. It requires no special dependencies.
+        
+        you also need to have 
+        
+            'django.core.context_processors.request',
+        
+        in your TEMPLATE_CONTEXT_PROCESSORS and kibrit in your INSTALLED_APPS
+        
+        The package can try to detect .git in your project automatically but it is best if you explicitly set
+        
+        KIBRIT_PATH in your settings to where the .git file is in your project.
+        
+Keywords: git,static,revision,django
+Platform: Any
+Classifier: Development Status :: 3 - Alpha
+Classifier: Intended Audience :: Developers
+Classifier: Intended Audience :: System Administrators
+Classifier: Natural Language :: English
+Classifier: Natural Language :: Turkish
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Classifier: Programming Language :: Python
+Classifier: Framework :: Django
+Classifier: Programming Language :: Python :: 2.6
+Classifier: Environment :: Console

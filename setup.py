@@ -30,7 +30,7 @@ def read(fname):
         return ''
 
 
-NAME = 'kibrit'
+NAME = 'django-kibrit'
 
 CURDIR = op.dirname(__file__)
 MODULE = __import__(NAME)

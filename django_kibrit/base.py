@@ -13,8 +13,6 @@ class GitRevision(object):
     Return the 8 character long git revision number or an empty string
     """
 
-    _revision = None
-
     def __init__(self, path=None):
         """
         Get the cached tag for the cached key id. Otherwise create your own
@@ -26,18 +24,18 @@ class GitRevision(object):
         """
         Get current revision
         """
-        self.init_repo()
-        cache.set(DJANGO_KIBRIT_CACHED_KEY_ID, self._revision, 60)
-        return self._revision
+        revision = self.init_repo()
+        cache.set(DJANGO_KIBRIT_CACHED_KEY_ID, revision, 60)
+        return revision
 
     def init_repo(self):
         """
         The command to run and tag to return
         """
         try:
-            self._revision = self.git('git describe --always --tags')
+            return self.git('git describe --always --tags')
         except Exception, err:
-            self._revision = ''
+            return ''
 
     def git(self, command=None, stderr=PIPE, stdout=PIPE, **kwargs):
         """

@@ -12,7 +12,7 @@ def revision(request):
     if cached_tag:
         revision = cached_tag
     else:
-        revision = GitRevision(settings.KIBRIT_PATH).revision,
+        revision = GitRevision(settings.KIBRIT_PATH).revision
     return {
         'KIBRIT_REVISION': str('?%s'%revision),
         }

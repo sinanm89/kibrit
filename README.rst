@@ -9,7 +9,7 @@ Usage:
 The intent of django_kibrit is to burn the css cache of the client upon a change in the project.
 
     # Somewhere in your templates
-    <link href="{{ STATIC_URL }}css/screen.css{{ REVISION }}" media="screen, projection" rel="stylesheet" type="text/css" />
+    <link href="{{ STATIC_URL }}css/screen.css{{ KIBRIT_REVISION }}" media="screen, projection" rel="stylesheet" type="text/css" />
 
 Installation:
 ------------

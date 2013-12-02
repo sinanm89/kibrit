@@ -27,7 +27,7 @@ Kibrit makes use of the `memcached` library in django. To enable this place
 
 To use kibrit on your templates append the following 2 lines at the end of your projects `settings.py`.
 
-    TEMPLATE_CONTEXT_PROCESSORS += 'barista.kibrit.context_processor.revision',
+    TEMPLATE_CONTEXT_PROCESSORS += ('django_kibrit.context_processors.revision',)
     INSTALLED_APPS += 'django_kibrit',
 
 The package can try to detect .git in your project automatically but it is best if you explicitly set KIBRIT_PATH in your settings to where the .git file is in your project.

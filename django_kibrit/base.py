@@ -58,6 +58,7 @@ class GitRevision(object):
         """
         Recursively finds a file directory named .git
         """
+        # TODO: THIS IS HORRENDOUS CHANGE IT TO THE EXPLICIT PATH
         command = "find -L ../src/ -type d -name .git".split()
         # TODO: can be made easier with __file__ and/or __name__
         command[2] = kwargs.get('path') or os.path.join(os.path.realpath(os.path.dirname(sys.argv[0])), '../src/')

@@ -1,4 +1,4 @@
-kibrit
+django_kibrit
 =============
 
 A git version parser for django templates.
@@ -32,4 +32,4 @@ To use kibrit on your templates append the following 2 lines at the end of your 
 
 The package can try to detect .git in your project automatically but it is best if you explicitly set KIBRIT_PATH in your settings to where the .git file is in your project.
 
-    KIBRIT_PATH = '/path/to/your/.git/file' # You've found it when 'ls -al | grep .git' prints the .git file
+    KIBRIT_PATH = '/path/to/your/.git' # You've found it when 'ls -al | grep .git' prints the .git file
